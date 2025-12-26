@@ -1,176 +1,84 @@
-# Volunteer Connect
+Volunteering Website — University Group Project (2024)
 
-Volunteer Connect is an innovative web platform that bridges passionate volunteers with organizations in need. The platform simplifies volunteer management by providing a unified hub where both volunteers and organizations can create and update their profiles, join communities, and communicate in real‑time.
+Role: Full-Stack Contributor (Frontend + Backend + Database)
+Team Size: 4
+Tech Stack: JavaScript, HTML, CSS, Express.js, SQL, Node.js
 
-[![Email Me](https://img.shields.io/badge/Email-Get_In_Touch-FF4500?style=for-the-badge&logo=gmail&logoColor=white)](mailto:duybao21560@gmail.com)
-[![My Website](https://img.shields.io/badge/Website-Explore-1E90FF?style=for-the-badge&logo=chrome&logoColor=white)](https://tssniper349.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Network-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tssniper349)
+📌 Project Overview
 
-## Overview
+- This was a team project completed at the University of Adelaide as part of the Web & Database Computing course.
+- The goal was to develop a web platform that connects volunteers with organisations, with features such as role browsing, application forms, and organisation management.
 
-Volunteer Connect is designed for two primary user groups:
+- The original repository is private (GitHub Classroom).
+- This public version documents my contributions, sample code, screenshots, and explanations for portfolio purposes.
 
-- **Volunteers**: 
-  - Sign in using their Google account.
-  - Search and filter organizations by type, category, or location to find the right match.
-  - Join organizations, browse available events and shifts, and apply for specific shifts.
-  - Receive real‑time in-app notifications and email updates about new opportunities or changes.
+🧑‍💻 My Responsibilities & Contributions
 
-- **Organizations**:
-  - Create and maintain a public profile, similar to other social platforms.
-  - Post events with multiple shifts to accommodate diverse volunteer needs.
-  - Manage volunteer applications and member information.
-  - Send updates via email to all their members whenever there’s a new announcement or change.
+Based directly on the commit history from the original repository:
 
-## Key Features
+1. Frontend Page Development & Fixes
 
-- **Google Login Integration:** Secure authentication through Google OAuth for seamless sign-ins.
-- **Search & Filter:** Volunteers can search and filter organizations based on interests, type, or location.
-- **Profile Management:** Both volunteers and organizations can modify their profiles and update personal information.
-- **Event & Shift Management:** Organizations can post events with multiple shift options, and volunteers can easily sign up.
-- **Real-Time Notifications:** Instant updates for volunteers via in-app notifications.
-- **Email Updates:** Organizations can automatically dispatch email updates to all their members.
-- **Robust Database:** Uses MySQL for reliable, scalable data management.
-- **Backend Powered by Node.js & Express:** Provides lightweight, efficient RESTful API endpoints.
+- I implemented and refined several user-facing pages:
 
-## Architecture & Technologies
+- Admin Profile Page: (private/admin_profile.html, admin_profile.js)
+→ Fixed UI layout, improved interactions, and updated frontend logic.
 
-- **Backend:** Built with [Node.js](https://nodejs.org/) and [Express](https://expressjs.com/), offering a clean RESTful API.
-- **Database:** Uses [MySQL](https://www.mysql.com/) for managing user profiles, events, organization details, and more.
-- **Authentication:** Integrated with Google OAuth for secure user login.
-- **Email Service:** Integrated email services for sending organization updates to member emails.
-- **Frontend:** A responsive and user-friendly interface that allows easy search, filtering, and profile management.
+- Manager Profile Page: (private/manager_profile.html)
+→ Developed the initial version of the manager interface.
 
-## Screenshots
+- Application Form UI: (application-form.css)
+→ Improved styling, structure, and responsiveness.
 
-Take a visual tour of Volunteer Connect through these screenshots:
+- Organisation & User Profile Pages: (routes/organisation.js, routes/users.js)
+→ Fixed page layout rendering and content logic.
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+- Search Bar Functionality: (get_event_info.js)
+→ Improved search behaviour and event info processing.
 
-  <div style="flex: 0 0 45%; margin-bottom: 10px;">
-    <img src="screenshots/Homepage.png" alt="Login Page" style="width: 100%;">
-    <p align="center"><strong>Home Page</strong></p>
-  </div>
+2. Backend Routing & Logic
 
-  <div style="flex: 0 0 45%; margin-bottom: 10px;">
-    <img src="screenshots/SearchOrganization.png" alt="Organization Search & Filter" style="width: 100%;">
-    <p align="center"><strong>Search &amp; Filter Organizations</strong></p>
-  </div>
+- Developed and updated Express.js routes for organisation and user pages
+(routes/organisation.js, routes/users.js)
 
-  <div style="flex: 0 0 45%; margin-bottom: 10px;">
-    <img src="screenshots/ViewOrganization.png" alt="Organization Profile" style="width: 100%;">
-    <p align="center"><strong>Organization Profile</strong></p>
-  </div>
+- Fixed data handling issues and improved backend responses.
 
-  <div style="flex: 0 0 45%; margin-bottom: 10px;">
-    <img src="screenshots/CreateEvent.png" alt="Event Creation" style="width: 100%;">
-    <p align="center"><strong>Event Creation</strong></p>
-  </div>
+3. Database Maintenance
 
-  <div style="flex: 0 0 45%; margin-bottom: 10px;">
-    <img src="screenshots/ApplyingShift.png" alt="Shift Management" style="width: 100%;">
-    <p align="center"><strong>Shift Application</strong></p>
-  </div>
+- Updated the volunteer database design
+(volunteer_dataPlan.sql)
 
-  <div style="flex: 0 0 45%; margin-bottom: 10px;">
-    <img src="screenshots/ViewUpdates.png" alt="Real-Time Notifications" style="width: 100%;">
-    <p align="center"><strong>Real-Time Notifications</strong></p>
-  </div>
+- Added and modified SQL entries for testing
 
-  <div style="flex: 0 0 45%; margin-bottom: 10px;">
-    <img src="screenshots/UserProfile.png" alt="Profile Management" style="width: 100%;">
-    <p align="center"><strong>User Profile Managment</strong></p>
-  </div>
+- Assisted teammates by maintaining a clean database for demo purposes
 
-  <div style="flex: 0 0 45%; margin-bottom: 10px;">
-    <img src="screenshots/PostUpdate.png" alt="Profile Management" style="width: 100%;">
-    <p align="center"><strong>Organization Profile Management</strong></p>
-  </div>
+4. Data Schema:
 
-  <div style="flex: 0 0 45%; margin-bottom: 10px;">
-    <img src="screenshots/AdminPage.png" alt="Settings &amp; Modifications" style="width: 100%;">
-    <p align="center"><strong>Administrator Page</strong></p>
-  </div>
+I created data schema to visualize the data usage overall.
 
-</div>
+📂 Files that I Directly Worked On: 
+- private/admin_profile.html (11 lines added & 13 lines removed)
+- public/javascripts/admin_profile.js (130 lines added & 27 lines removed)
+- public/javascripts/get_event_info.js (50 lines added & 11 lines removed)
+- public/stylesheets/application-form.css (50 lines added & 45 lines removed)
+- routes/organisation.js (171 lines added & 117 lines removed)
+- routes/users.js (30 lines added & 40 lines removed)
+- volunteer_dataPlan.sql (22 lines added & 16 lines removed)
+- private/manager_profile.html (39 lines added & 1 line removed)
 
-## Getting Started
+Data Schema:
+<img width="2048" height="1526" alt="image" src="https://github.com/user-attachments/assets/2977890e-a2cf-4bb0-a53a-c2b6ff0d0f33" />
 
-### Prerequisites
+Website Overview:
+<img width="1365" height="617" alt="image" src="https://github.com/user-attachments/assets/d00a378f-3811-4c92-afed-e4bd4bd9a3c9" />
+<img width="1365" height="618" alt="image" src="https://github.com/user-attachments/assets/0cfe5dfa-deda-438f-9fe5-e29b199ba248" />
+<img width="1365" height="616" alt="image" src="https://github.com/user-attachments/assets/30bf0790-a370-46b3-b3d0-d09066b73b69" />
+<img width="1365" height="615" alt="image" src="https://github.com/user-attachments/assets/6b49c737-04b8-4659-91d2-ec0b1d2f5c46" />
+<img width="1365" height="618" alt="image" src="https://github.com/user-attachments/assets/95baa9fc-a3c6-4071-9b98-e87e57d4ac8d" />
+<img width="1365" height="619" alt="image" src="https://github.com/user-attachments/assets/28f1344e-2bcc-4c04-af46-8dc86ec9f87e" />
+<img width="1365" height="619" alt="image" src="https://github.com/user-attachments/assets/2da48d1a-51cc-4b0a-bb43-4a0deed04dbb" />
+<img width="1365" height="618" alt="image" src="https://github.com/user-attachments/assets/f3041e19-10d1-4633-ae0e-2a73e9115144" />
 
-- [Node.js](https://nodejs.org/) (v14 or above)
-- [MySQL](https://www.mysql.com/) server
-- Google Developer account for OAuth credentials
 
-### Installation
 
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/TSSniper349/Volunteer_Connect.git
-    cd Volunteer_Connect
-    ```
 
-2. **Install dependencies:**
-    ```bash
-    npm install
-    ```
 
-3. **Configure Environment Variables:**
-
-   Create a `.env` file in the root directory with the following:
-    ```env
-    PORT=3000
-    DB_HOST=your_mysql_host
-    DB_USER=your_mysql_user
-    DB_PASS=your_mysql_password
-    DB_NAME=your_database_name
-    JWT_SECRET=your_secret_key
-    GOOGLE_CLIENT_ID=your_google_client_id
-    GOOGLE_CLIENT_SECRET=your_google_client_secret
-    EMAIL_SERVICE_API_KEY=your_email_service_api_key
-    ```
-
-4. **Set Up MySQL Database:**
-
-   Import the provided `schema.sql` file to set up the necessary tables:
-    ```bash
-    mysql -u your_mysql_user -p your_database_name < schema.sql
-    ```
-
-5. **Start the Server:**
-    ```bash
-    npm run dev
-    ```
-
-6. **Access the Application:**
-
-   Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
-
-## Usage
-
-- **For Volunteers:**
-  - Sign in using your Google account.
-  - Use the search and filter functionality to find organizations that match your interests.
-  - Join organizations, browse events and shifts, and apply for volunteer opportunities.
-  - Receive real‑time notifications and email updates on new opportunities.
-
-- **For Organizations:**
-  - Create and update your public profile.
-  - Post events with multiple shift options.
-  - Manage volunteer applications and member information.
-  - Automatically send email updates to all members when new announcements are posted.
-
-## Contributing
-
-Contributions are welcome! Please review our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-Volunteer Connect is built to make volunteering simple, engaging, and efficient—bringing together communities and organizations with just a few clicks. Feedback and contributions are highly appreciated!
-
-Happy coding,  
-Paul
